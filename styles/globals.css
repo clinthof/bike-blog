@@ -1,0 +1,19 @@
+body {
+  margin: 0px;
+  background-color: rgb(255, 244, 227);
+}
+
+.root {
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto 0 auto;
+}
+
+.mui-svg-icon {
+  transform: scale(3);
+  /* border: 1px solid red; */
+}
+
+.logo {
+  padding: 10px;
+}
