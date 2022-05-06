@@ -1,11 +1,12 @@
 import type { NextPage } from 'next';
+import Layout from '../src/components/layout/Layout';
 
 const Bikes: NextPage = () => {
     return (
-        <div>
+        <Layout>
             My bikes
-        </div>
+        </Layout>
     )
-}
+};
 
-export default Bikes
+export default Bikes;

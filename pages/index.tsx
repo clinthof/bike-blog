@@ -1,12 +1,11 @@
 import type { NextPage } from 'next';
-import { HeaderContainer } from '../src/containers/header';
+import Layout from '../src/components/layout/Layout';
 
 const Home: NextPage = () => {
   return (
-    <div>    
-      <HeaderContainer />
-      Blog homepage
-    </div>
+    <Layout>   
+      Blog homepage content
+    </Layout>
   )
 }
 

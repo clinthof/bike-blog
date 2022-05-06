@@ -1,5 +1,11 @@
-export default function index() {
+import Layout from '../../src/components/layout/Layout';
+
+const index = () => {
   return (
-    <div>blog home</div>
+    <Layout>
+      List of blog posts 
+    </Layout>
   )
 }
+
+export default index;
