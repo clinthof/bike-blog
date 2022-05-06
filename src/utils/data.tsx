@@ -1,9 +1,13 @@
 interface Links {
-    name: string,
-    path: string
+    name: string;
+    path: string;
 }
 
 const navLinks: Array<Links> = [
+    {
+        name: 'home',
+        path: '/',
+    },
     {
         name: 'posts',
         path: '/posts',
