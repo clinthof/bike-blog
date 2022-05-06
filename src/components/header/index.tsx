@@ -1,22 +1,32 @@
-import { ReactNode, forwardRef } from 'react';
+import { ReactNode, forwardRef, } from 'react';
 import { 
   Container, 
   Feature,
   Nav, 
+  List,
   Item,
   Text,
  } from './styles/headerStyles';
 
-const Header = ({ children, ...restProps }: {children: ReactNode}) => {
-  return <Container {...restProps}>{children}</Container>
+const Header = (
+    {
+        children,
+        collapse = false,
+        ...restProps }: { children: ReactNode, collapse: boolean }) =>
+{
+    return <Container {...restProps}>{children}</Container>;
 };
 
-Header.Feature = function HeaderFeature({ children, ...restProps }: { children: ReactNode }) {
+Header.Feature = forwardRef(function HeaderFeature({ children, ...restProps }: { children: ReactNode }, ref) {
   return <Feature {...restProps}>{children}</Feature>;
-};
+});
 
 Header.Nav = function HeaderNav({ children, ...restProps }: { children: ReactNode }) {
   return <Nav {...restProps}>{children}</Nav>;
+};
+
+Header.List = function HeaderList({ children, ...restProps }: { children: ReactNode }) {
+  return <List {...restProps}>{children}</List>;
 };
 
 Header.Item = forwardRef(function HeaderItem({ children, ...restProps }: { children: ReactNode }, ref) {
