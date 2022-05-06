@@ -1,6 +1,13 @@
 body {
   margin: 0px;
-  background-color: rgb(255, 244, 227);
+  background-color: rgb(254, 216, 211);
+  user-select: none;
+}
+
+.page-content {
+  margin: 40px;
+  color: white;
+  font-size: 24px;
 }
 
 .root {
@@ -11,7 +18,8 @@ body {
 
 .mui-svg-icon {
   transform: scale(3);
-  /* border: 1px solid red; */
+  color: salmon;
+  filter: drop-shadow(-1px 0.5px rgb(0, 0, 0));
 }
 
 .logo {
