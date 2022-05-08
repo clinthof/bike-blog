@@ -1,10 +1,6 @@
 import styled from 'styled-components';
-interface ContainerProps {
-  readonly collapse: boolean;
-}
 
-const Container = styled.div<ContainerProps>`
-  box-shadow: ${({ collapse }) => collapse && '0 40px 200px rgba(0,0,0,0.9) inset'};
+const Container = styled.div`
   display: flex;
   position: sticky;
   top: 0;
@@ -23,7 +19,11 @@ const Feature = styled.div`
   width: fit-content;
   justify-content: center;
   align-items: center;
-  margin-left: 100px;
+  margin-left: 8%;
+
+  @media (max-width: 700px) {
+    margin-left: 60px;
+  }
 
   @media (max-width: 600px) {
     margin: 0 auto;
@@ -34,7 +34,7 @@ const Nav = styled.nav`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-right: 10%;
+  margin-right: 6%;
 
   @media (max-width: 600px) {
     display: none;
@@ -44,11 +44,17 @@ const Nav = styled.nav`
 const List = styled.ul`
   display: flex;
   flex-direction: row;
+  gap: 40px;
   align-items: center;
   padding: 0;
+
+  @media (max-width: 800px) {
+    gap: 20px;
+  }
 `;
 
 const Item = styled.li`
+  border-radius: 20%;
   list-style-type: none;
   display: flex;
   cursor: pointer;
@@ -61,20 +67,20 @@ const Item = styled.li`
   }
 
   @media (max-width: 900px) {
-    padding: 22px;
+    padding: 20px;
   }
 `;
 
 const Text = styled.h1`
   display: flex;
   box-sizing: border-box;
-  font-size: 200%;
+  font-size: 35px;
   font-style: italic;
   white-space: nowrap;
   height: fit-content;
   justify-content: space-between;
   color: white;
-  text-shadow: -2px 2px pink, -4px 3px salmon, -6px 3.5px rgb(203, 97, 85);
+  text-shadow: -2px 1.75px pink, -4px 3px salmon, -6px 3.5px rgb(203, 97, 85);
   margin-right: 0.5em;
 
   @media (max-width: 650px) {

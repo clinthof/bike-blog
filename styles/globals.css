@@ -5,7 +5,7 @@ body {
 }
 
 .page-content {
-  margin: 40px;
+  padding: 40px;
   color: white;
   font-size: 24px;
 }
@@ -13,13 +13,18 @@ body {
 .root {
   overflow: hidden;
   width: 100%;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
 }
 
 .mui-svg-icon {
   transform: scale(3);
   color: salmon;
-  filter: drop-shadow(-1px 0.5px rgb(0, 0, 0));
+  filter: drop-shadow(-1px 0.5px #cb6155);
+}
+
+.nav-icon {
+  transform: scale(1.75);
+  color: salmon;
 }
 
 .logo {
