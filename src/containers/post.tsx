@@ -1,0 +1,7 @@
+
+
+const PostContainer = () => {
+
+};
+
+export { PostContainer };
