@@ -5,19 +5,9 @@ import Link from 'next/link';
 import BoltIcon from '@mui/icons-material/Bolt';
 
 const HeaderContainer = () => {
-  const [collapse, setCollapse] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', () =>
-        setCollapse(window.scrollY > 200)
-      );
-    }
-  }, []);
-
   return (
     <>
-      <Header collapse={collapse}>
+      <Header>
         <Link href='/' passHref>
           <Header.Feature>
             <Header.Text>The Bike Blog</Header.Text>
@@ -29,7 +19,7 @@ const HeaderContainer = () => {
             {navLinks.map((link, index) => (
                 <Link key={index} href={link.path} passHref>
                   <Header.Item>
-                    {link.name}
+                    {link.icon}
                   </Header.Item>
                 </Link>
             ))}

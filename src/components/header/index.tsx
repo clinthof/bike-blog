@@ -8,12 +8,7 @@ import {
   Text,
  } from './styles/headerStyles';
 
-const Header = (
-    {
-        children,
-        collapse = false,
-        ...restProps }: { children: ReactNode, collapse: boolean }) =>
-{
+const Header = ({ children, ...restProps }: { children: ReactNode }) => {
     return <Container {...restProps}>{children}</Container>;
 };
 
