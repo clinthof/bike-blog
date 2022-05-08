@@ -1,11 +1,10 @@
-import Layout from '../../src/components/layout/Layout';
 
 const index = () => {
   return (
-    <Layout>
-      List of blog posts 
-    </Layout>
-  )
-}
+    <>
+      List of blog posts
+    </>
+  );
+};
 
 export default index;
