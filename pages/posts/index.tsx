@@ -1,9 +1,8 @@
+import { PostContainer } from '../../src/containers/post';
 
 const index = () => {
   return (
-    <>
-      List of blog posts
-    </>
+    <PostContainer />
   );
 };
 
