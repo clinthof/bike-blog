@@ -8,6 +8,12 @@ interface Links {
     icon: JSX.Element;
 }
 
+interface Posts {
+    title: string;
+    excerpt: string;
+    content: string;
+}
+
 const navLinks: Array<Links> = [
     {
         name: 'home',
@@ -26,4 +32,87 @@ const navLinks: Array<Links> = [
     },
 ];
 
-export { navLinks };
+const fakePosts: Array<Posts> = [
+    {
+        title: 'Post 1',
+        excerpt: 'This is the first post.',
+        content: 'Welcome to the first post. It is not a real post, but here it is.',
+    },
+    {
+        title: 'Post 2',
+        excerpt: 'This is the next post.',
+        content: 'Welcome to the next post. It is not a real post, but here it is.',
+    },
+    {
+        title: 'Post 1',
+        excerpt: 'This is the next post.',
+        content: 'Welcome to the next post. It is not a real post, but here it is.',
+    },
+    {
+        title: 'Post 2',
+        excerpt: 'This is the next post.',
+        content: 'Welcome to the next post. It is not a real post, but here it is.',
+    },
+    {
+        title: 'Post 1',
+        excerpt: 'This is the next post.',
+        content: 'Welcome to the next post. It is not a real post, but here it is.',
+    },
+    {
+        title: 'Post 2',
+        excerpt: 'This is the next post.',
+        content: 'Welcome to the next post. It is not a real post, but here it is.',
+    },
+    {
+        title: 'Post 1',
+        excerpt: 'This is the next post.',
+        content: 'Welcome to the next post. It is not a real post, but here it is.',
+    },
+    {
+        title: 'Post 2',
+        excerpt: 'This is the next post.',
+        content: 'Welcome to the next post. It is not a real post, but here it is.',
+    },
+    {
+        title: 'Post 1',
+        excerpt: 'This is the next post.',
+        content: 'Welcome to the next post. It is not a real post, but here it is.',
+    },
+    {
+        title: 'Post 2',
+        excerpt: 'This is the next post.',
+        content: 'Welcome to the next post. It is not a real post, but here it is.',
+    },
+    {
+        title: 'Post 1',
+        excerpt: 'This is the next post.',
+        content: 'Welcome to the next post. It is not a real post, but here it is.',
+    },
+    {
+        title: 'Post 2',
+        excerpt: 'This is the next post.',
+        content: 'Welcome to the next post. It is not a real post, but here it is.',
+    },
+    {
+        title: 'Post 1',
+        excerpt: 'This is the next post.',
+        content: 'Welcome to the next post. It is not a real post, but here it is.',
+    },
+    {
+        title: 'Post 2',
+        excerpt: 'This is the next post.',
+        content: 'Welcome to the next post. It is not a real post, but here it is.',
+    },
+    {
+        title: 'Post 1',
+        excerpt: 'This is the next post.',
+        content: 'Welcome to the next post. It is not a real post, but here it is.',
+    },
+    {
+        title: 'Post 2',
+        excerpt: 'This is the next post.',
+        content: 'Welcome to the next post. It is not a real post, but here it is.',
+    },
+]
+
+export { navLinks, fakePosts, };
