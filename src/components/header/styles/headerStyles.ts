@@ -4,12 +4,13 @@ const Container = styled.div`
   display: flex;
   position: sticky;
   top: 0;
-  background-color: blanchedalmond;
+  background-color: ${props => props.theme.colors.blanchedAlmond};
   width: 100%;
   height: 140px;
   box-sizing: border-box;
   padding: 20px;
   justify-content: space-between;
+  z-index: 999;
 `;
 
 const Feature = styled.div`
@@ -54,16 +55,17 @@ const List = styled.ul`
 `;
 
 const Item = styled.li`
+  display: flex;
   border-radius: 20%;
   list-style-type: none;
-  display: flex;
   cursor: pointer;
   font-size: 24px;
   padding: 30px;
-  color: salmon;
+  color: ${({ theme }) => theme.colors.salmon};
+  transition: background .2s ease-out;
   
   &:hover {
-    background-color: rgb(243, 215, 199);
+    background-color: ${({ theme }) => theme.colors.almond};
   }
 
   @media (max-width: 900px) {
