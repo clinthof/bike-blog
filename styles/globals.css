@@ -19,7 +19,6 @@ body {
 .mui-svg-icon {
   transform: scale(3);
   color: salmon;
-  filter: drop-shadow(-1px 0.5px #cb6155);
 }
 
 .nav-icon {
