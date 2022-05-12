@@ -6,7 +6,7 @@ const Container = styled.div`
   top: 0;
   background-color: ${props => props.theme.colors.blanchedAlmond};
   width: 100%;
-  height: 140px;
+  height: 80px;
   box-sizing: border-box;
   padding: 20px;
   justify-content: space-between;
@@ -14,6 +14,7 @@ const Container = styled.div`
 `;
 
 const Feature = styled.div`
+  font-family: 'Times New Roman', Times, serif;
   display: flex;
   flex-wrap: nowrap;
   cursor: pointer;
@@ -60,16 +61,12 @@ const Item = styled.li`
   list-style-type: none;
   cursor: pointer;
   font-size: 24px;
-  padding: 30px;
+  padding: 20px;
   color: ${({ theme }) => theme.colors.salmon};
   transition: background .2s ease-out;
   
   &:hover {
     background-color: ${({ theme }) => theme.colors.almond};
-  }
-
-  @media (max-width: 900px) {
-    padding: 20px;
   }
 `;
 

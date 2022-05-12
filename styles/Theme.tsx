@@ -8,6 +8,7 @@ const theme = {
     unbleachedSilk: '#fed8d3',
     pink: '#ffc0cb',
     salmon: '#fa8072',
+    outrageousOrange: '#ff6a51',
     indianRed: '#cb6155',
   },
   fonts: [],

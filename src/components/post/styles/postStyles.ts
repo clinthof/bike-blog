@@ -3,11 +3,11 @@ import styled from 'styled-components';
 const Card = styled.div`
   display: flex;
   background-color: ${props => props.theme.colors.blanchedAlmond};
-  color: ${props => props.theme.colors.salmon};
+  color: black;
   cursor: pointer;
   margin: 0 auto;
   box-sizing: border-box;
-  height: 350px;
+  height: 400px;
   width: 75%;
   max-width: 900px;
   border: 0;
@@ -18,14 +18,14 @@ const Card = styled.div`
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: -6px 8px salmon;
+    box-shadow: ${props => `-6px 8px ${props.theme.colors.indianRed}`};
   }
 
   &:last-child {
     margin-bottom: 0px;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 650px) {
     width: 100%;
     height: 280px;
     flex-direction: column;
@@ -35,12 +35,12 @@ const Card = styled.div`
 const StatsContainer = styled.div`
   box-sizing: border-box;
   padding: 10px;
-  border: 0;
+  border: 2px solid red;
   border-radius: 0 10px 10px 0;
   width: 25%;
   font-size: 16px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 650px) {
     width: 100%;
     border-radius: 0 0 10px 10px;
   }
@@ -60,7 +60,7 @@ const InfoContainer = styled.div`
     padding-left: 10px;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 650px) {
     width: 100%;
     border-radius: 10px 10px 0 0;
   }
@@ -69,7 +69,7 @@ const InfoContainer = styled.div`
 const Title = styled.h1`
   font-size: 30px;
   
-  @media (max-width: 600px) {
+  @media (max-width: 650px) {
     font-size: 20px;
   }
 `;
