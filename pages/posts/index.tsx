@@ -1,9 +1,10 @@
+import { NextPage } from 'next';
 import { PostContainer } from '../../src/containers/post';
 
-const index = () => {
+const posts: NextPage = () => {
   return (
     <PostContainer />
   );
 };
 
-export default index;
+export default posts;

@@ -7,8 +7,8 @@ import {
   Excerpt,
 } from './styles/postStyles';
 
-type Props = {
-  children: ReactNode,
+export interface Props {
+  children: ReactNode;
 };
 
 const Post = ({ children, ...restProps }: Props) => {

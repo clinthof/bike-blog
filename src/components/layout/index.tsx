@@ -10,7 +10,7 @@ const Layout = ({ children }: Props) => {
   return (
     <Theme>
       <HeaderContainer />
-      <div className='page-content'>
+      <div>
         {children}
       </div>
     </Theme>

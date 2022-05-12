@@ -3,7 +3,7 @@ import { fakePosts } from '../utils/data';
 
 const PostContainer = () => {
   return (
-    <>
+    <div className='page-content'>
       {
         fakePosts.map((post, index) => ( 
           <Post key={index}>
@@ -12,11 +12,17 @@ const PostContainer = () => {
               <Post.Excerpt>{post.excerpt}</Post.Excerpt>
             </Post.InfoContainer>
             <Post.StatsContainer>
-              Stats go here
+              <Post.Title>Stats</Post.Title>
+              <div>
+                {post.stats.distance}
+                {post.stats.time}
+                {post.stats.speed}
+                {post.stats.watts}
+              </div>
             </Post.StatsContainer>
           </Post>
       ))}
-    </>
+    </div>
   );
 };
 

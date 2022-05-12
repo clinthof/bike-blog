@@ -1,4 +1,3 @@
-import { useState, useEffect, } from 'react';
 import { Header } from '../components';
 import { navLinks } from '../utils/data';
 import Link from 'next/link';

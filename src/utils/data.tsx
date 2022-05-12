@@ -12,6 +12,12 @@ interface Posts {
     title: string;
     excerpt: string;
     content: string;
+    stats: {
+        distance: string;
+        time: string;
+        speed: string;
+        watts: string;
+    };
 }
 
 const navLinks: Array<Links> = [
@@ -37,81 +43,177 @@ const fakePosts: Array<Posts> = [
         title: 'Post 1',
         excerpt: 'This is the first post.',
         content: 'Welcome to the first post. It is not a real post, but here it is.',
+        stats: {
+            distance: '',
+            time: '',
+            speed: '',
+            watts: '',
+        },
     },
     {
         title: 'Post 2',
         excerpt: 'This is the next post.',
         content: 'Welcome to the next post. It is not a real post, but here it is.',
+        stats: {
+            distance: '',
+            time: '',
+            speed: '',
+            watts: '',
+        },
     },
     {
         title: 'Post 1',
         excerpt: 'This is the next post.',
         content: 'Welcome to the next post. It is not a real post, but here it is.',
+        stats: {
+            distance: '',
+            time: '',
+            speed: '',
+            watts: '',
+        },
     },
     {
         title: 'Post 2',
         excerpt: 'This is the next post.',
         content: 'Welcome to the next post. It is not a real post, but here it is.',
+        stats: {
+            distance: '',
+            time: '',
+            speed: '',
+            watts: '',
+        },
     },
     {
         title: 'Post 1',
         excerpt: 'This is the next post.',
         content: 'Welcome to the next post. It is not a real post, but here it is.',
+        stats: {
+            distance: '',
+            time: '',
+            speed: '',
+            watts: '',
+        },
     },
     {
         title: 'Post 2',
         excerpt: 'This is the next post.',
         content: 'Welcome to the next post. It is not a real post, but here it is.',
+        stats: {
+            distance: '',
+            time: '',
+            speed: '',
+            watts: '',
+        },
     },
     {
         title: 'Post 1',
         excerpt: 'This is the next post.',
         content: 'Welcome to the next post. It is not a real post, but here it is.',
+        stats: {
+            distance: '',
+            time: '',
+            speed: '',
+            watts: '',
+        },
     },
     {
         title: 'Post 2',
         excerpt: 'This is the next post.',
         content: 'Welcome to the next post. It is not a real post, but here it is.',
+        stats: {
+            distance: '',
+            time: '',
+            speed: '',
+            watts: '',
+        },
     },
     {
         title: 'Post 1',
         excerpt: 'This is the next post.',
         content: 'Welcome to the next post. It is not a real post, but here it is.',
+        stats: {
+            distance: '',
+            time: '',
+            speed: '',
+            watts: '',
+        },
     },
     {
         title: 'Post 2',
         excerpt: 'This is the next post.',
         content: 'Welcome to the next post. It is not a real post, but here it is.',
+        stats: {
+            distance: '',
+            time: '',
+            speed: '',
+            watts: '',
+        },
     },
     {
         title: 'Post 1',
         excerpt: 'This is the next post.',
         content: 'Welcome to the next post. It is not a real post, but here it is.',
+        stats: {
+            distance: '',
+            time: '',
+            speed: '',
+            watts: '',
+        },
     },
     {
         title: 'Post 2',
         excerpt: 'This is the next post.',
         content: 'Welcome to the next post. It is not a real post, but here it is.',
+        stats: {
+            distance: '',
+            time: '',
+            speed: '',
+            watts: '',
+        },
     },
     {
         title: 'Post 1',
         excerpt: 'This is the next post.',
         content: 'Welcome to the next post. It is not a real post, but here it is.',
+        stats: {
+            distance: '',
+            time: '',
+            speed: '',
+            watts: '',
+        },
     },
     {
         title: 'Post 2',
         excerpt: 'This is the next post.',
         content: 'Welcome to the next post. It is not a real post, but here it is.',
+        stats: {
+            distance: '',
+            time: '',
+            speed: '',
+            watts: '',
+        },
     },
     {
         title: 'Post 1',
         excerpt: 'This is the next post.',
         content: 'Welcome to the next post. It is not a real post, but here it is.',
+        stats: {
+            distance: '',
+            time: '',
+            speed: '',
+            watts: '',
+        },
     },
     {
         title: 'Post 2',
         excerpt: 'This is the next post.',
         content: 'Welcome to the next post. It is not a real post, but here it is.',
+        stats: {
+            distance: '',
+            time: '',
+            speed: '',
+            watts: '',
+        },
     },
 ]
 
