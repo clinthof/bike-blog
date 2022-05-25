@@ -6,7 +6,9 @@ const LandingContainer = () => {
   return (
     <div className='page-content'>
       <Landing>
-        <Landing.Title>Let's ride.</Landing.Title>
+        <Landing.Splash>
+          <Landing.Title>Let's ride.</Landing.Title>
+        </Landing.Splash>
         <Landing.Inner>
           <Landing.Column>
             <Landing.APIContent>Strava</Landing.APIContent>

@@ -5,15 +5,21 @@ const Container = styled.div`
   flex-direction: column;
   width: auto;
   padding: 10px;
-  border: 2px solid red;
 `;
 
 const Title = styled.h1`
-  box-sizing: border-box;
+  height: fit-content;
   font-size: 100px;
   font-weight: bold;
   text-shadow: ${props => `-6px 4px ${props.theme.colors.indianRed}`};
-  margin: 0;
+  margin: 1 auto;
+`;
+
+const Splash = styled.div`
+  display: flex;
+  height: 100vh;
+  width: auto;
+  border: 2px solid blue;
 `;
 
 const Inner = styled.div`
@@ -29,7 +35,6 @@ const Inner = styled.div`
 const Column = styled.div`
   display: flex;
   flex-direction: column;
-  border: 2px solid blue;
   justify-content: center;
   flex-basis: 100%;
   flex: 1;
@@ -55,6 +60,7 @@ const APIContent = styled.div`
 export {
   Container,
   Title,
+  Splash,
   Inner,
   Column,
   APIContent,

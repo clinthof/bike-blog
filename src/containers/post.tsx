@@ -1,28 +1,22 @@
 import { Post } from '../components';
 import { fakePosts } from '../utils/data';
+import Link from 'next/link';
 
 const PostContainer = () => {
   return (
-    <div className='page-content'>
+    <Post.Wrapper>
       {
         fakePosts.map((post, index) => ( 
-          <Post key={index}>
-            <Post.InfoContainer>
-              <Post.Title>{`Post ${index + 1}`}</Post.Title>
-              <Post.Excerpt>{post.excerpt}</Post.Excerpt>
-            </Post.InfoContainer>
-            <Post.StatsContainer>
-              <Post.Title>Stats</Post.Title>
-              <div>
-                {post.stats.distance}
-                {post.stats.time}
-                {post.stats.speed}
-                {post.stats.watts}
-              </div>
-            </Post.StatsContainer>
-          </Post>
+          <Link key={index} href={`/posts/${index + 1}`} passHref>          
+            <Post>
+              <Post.InfoContainer>
+                <Post.Title>{`Post ${index + 1}`}</Post.Title>
+                <Post.Excerpt>{post.excerpt}</Post.Excerpt>
+              </Post.InfoContainer>
+            </Post>
+          </Link>
       ))}
-    </div>
+    </Post.Wrapper>
   );
 };
 

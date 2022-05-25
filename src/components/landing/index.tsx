@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import { 
   Container, 
   Inner,
+  Splash,
   Column,
   Title, 
   APIContent,
@@ -17,6 +18,10 @@ const Landing = ({ children, ...restProps }: Props) => {
 
 Landing.Title = function LandingTitle({ children, ...restProps }: Props) {
   return <Title {...restProps}>{children}</Title>;
+};
+
+Landing.Splash = function LandingSplash({ children, ...restProps }: Props) {
+  return <Splash {...restProps}>{children}</Splash>;
 };
 
 Landing.Inner = function LandingInner({ children, ...restProps }: Props) {
