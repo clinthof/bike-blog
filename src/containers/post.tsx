@@ -13,6 +13,11 @@ const PostContainer = () => {
                 <Post.Title>{`Post ${index + 1}`}</Post.Title>
                 <Post.Excerpt>{post.excerpt}</Post.Excerpt>
               </Post.InfoContainer>
+              <Post.StatsContainer>
+                <Post.Title>
+                  Ride Statistics
+                </Post.Title>
+              </Post.StatsContainer>
             </Post>
           </Link>
       ))}

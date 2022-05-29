@@ -19,7 +19,6 @@ const Splash = styled.div`
   display: flex;
   height: 100vh;
   width: auto;
-  border: 2px solid blue;
 `;
 
 const Inner = styled.div`
