@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  margin: 0 auto;
-  box-sizing: border border-box;
+  margin: 0;
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   padding: 40px;
-  gap: 40px;
+  gap: 40px; 
 `;
 
 const InfoContainer = styled.div`
@@ -23,17 +23,13 @@ const InfoContainer = styled.div`
 
 const StatsContainer = styled.div`
   display: none;
+  height: 100%;
+  width: auto;
   box-sizing: border-box;
   padding: 10px;
-  border: 2px solid red;
-  border-radius: 0 10px 10px 0;
-  width: 25%;
   font-size: 16px;
-
-  @media (max-width: 650px) {
-    width: 100%;
-    border-radius: 0 0 10px 10px;
-  }
+  justify-content: center;
+  overflow-y: scroll;
 `;
 
 const Card = styled.div`
@@ -60,6 +56,9 @@ const Card = styled.div`
 
     ${InfoContainer} {
       display: none; // this will come in handy later ;)
+    }
+    ${StatsContainer} {
+      display: flex;
     }
   }
 
