@@ -1,18 +1,20 @@
 import type {
     NextPage,
     GetStaticProps,
+    GetStaticPaths,
     InferGetStaticPropsType,
 } from 'next'
 import { useRouter } from 'next/router'
 import { getPosts, getPostDetails } from '../../services';
 import { PostContainer } from '../../src/containers/post';
 
-const BlogPost: NextPage = () => {
+const BlogPost: NextPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
     const { query } = useRouter();
-    const postId = query.postId;
+    const slug = query.slug;
 
     return (
         <>
+            {post.title}
         </>
     )
 }
@@ -27,12 +29,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
 };
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
     const posts = await getPosts();
 
     return {
-        paths: posts.map(({ node: { postId } }) => ({
-            params: { postId }
+        paths: posts.map(({ node: { slug } }) => ({
+            params: { slug }
         })),
         fallback: false,
     }

@@ -2,7 +2,7 @@ import { Post } from '../components';
 import { fakePosts } from '../utils/data';
 import Link from 'next/link';
 
-const PostContainer = (post: any) => {
+const PostContainer = (posts: any) => {
   return (
     <Post.Wrapper>
       {
