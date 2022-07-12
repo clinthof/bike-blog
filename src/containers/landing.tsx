@@ -1,9 +1,8 @@
-import { Landing, Post } from '../components';
+import { Landing, } from '../components';
 import Link from 'next/link';
 import { PostContainer } from './post';
 
-const LandingContainer = (posts: any) => {
-  console.log(posts.posts);
+const LandingContainer = ({ posts }: any) => {
   return (
     <div className='page-content'>
       <Landing>

@@ -6,12 +6,10 @@ import type {
 } from 'next'
 import { useRouter } from 'next/router'
 import { getPosts, getPostDetails } from '../../services';
-import { PostContainer } from '../../src/containers/post';
 
 const BlogPost: NextPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
     const { query } = useRouter();
     const slug = query.slug;
-
     return (
         <>
             {post.title}

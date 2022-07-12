@@ -68,7 +68,7 @@ const getPostDetails = async (slug: string) => {
 
 const getRecentPosts = async () => {
   const query = gql`
-    query GetPostDetails() {
+    query GetPosts() {
       posts(
         orderBy: createdAt_ASC
         last: 3
@@ -82,6 +82,7 @@ const getRecentPosts = async () => {
       }
     }
   `;
+
   const result = await request(graphqlAPI, query);
 
   return result.posts;
