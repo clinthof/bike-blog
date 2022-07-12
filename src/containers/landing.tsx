@@ -2,7 +2,8 @@ import { Landing, Post } from '../components';
 import Link from 'next/link';
 import { PostContainer } from './post';
 
-const LandingContainer = () => {
+const LandingContainer = (posts: any) => {
+  console.log(posts.posts);
   return (
     <div className='page-content'>
       <Landing>
@@ -15,7 +16,7 @@ const LandingContainer = () => {
             <Landing.APIContent>Spotify</Landing.APIContent>
           </Landing.Column>
           <Landing.Column>
-            <PostContainer />
+            <PostContainer posts={posts} />
           </Landing.Column>
         </Landing.Inner>
       </Landing>

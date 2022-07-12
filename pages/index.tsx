@@ -1,16 +1,28 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
 import { LandingContainer } from '../src/containers/landing';
+import { getPosts } from '../services';
 
-const Home: NextPage = () => {
+const Home: NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div>
       <Head>
         <title>The Bike Blog</title>
       </Head>
-      <LandingContainer />
+      <LandingContainer posts={posts} />
     </div>
   )
-}
+};
 
-export default Home
+export default Home;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = (await getPosts()) || [];
+
+  return {
+    props: {
+      posts
+    }
+  }
+};
+
