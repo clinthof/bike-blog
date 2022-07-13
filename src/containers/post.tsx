@@ -1,17 +1,16 @@
 import { Post } from '../components';
-import { fakePosts } from '../utils/data';
 import Link from 'next/link';
 
-const PostContainer = () => {
+const PostContainer = (posts: any) => {
   return (
     <Post.Wrapper>
       {
-        fakePosts.map((post, index) => ( 
-          <Link key={index} href={`/posts/${index + 1}`} passHref>          
+        posts.posts.map((post: any, index: number) => ( 
+          <Link key={index} href={`/posts/${post.node.slug}`} passHref>          
             <Post>
               <Post.InfoContainer>
-                <Post.Title>{`Post ${index + 1}`}</Post.Title>
-                <Post.Excerpt>{post.excerpt}</Post.Excerpt>
+                <Post.Title>{post.node.title}</Post.Title>
+                <Post.Excerpt>{post.node.excerpt}</Post.Excerpt>
               </Post.InfoContainer>
               <Post.StatsContainer>
                 <Post.Title>

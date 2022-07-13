@@ -21,7 +21,7 @@ const Feature = styled.div`
   width: fit-content;
   justify-content: center;
   align-items: center;
-  margin-left: 8%;
+  margin-left: 6%;
 
   @media (max-width: 700px) {
     margin-left: 60px;
