@@ -70,16 +70,11 @@ const getRecentPosts = async () => {
   const query = gql`
     query GetPosts() {
       posts(
-        orderBy: createdAt_ASC
-        last: 3
+        orderBy: createdAt_DESC
+        first: 3
       ) {
         title
-        featuredImage {
-          url
         }
-        createdAt
-        slug
-      }
     }
   `;
 

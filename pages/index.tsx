@@ -18,7 +18,6 @@ export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = (await getPosts()) || [];
-
   return {
     props: {
       posts
