@@ -8,8 +8,9 @@ import { useRouter } from 'next/router'
 import { getPosts, getPostDetails } from '../../services';
 
 const BlogPost: NextPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
-    const { query } = useRouter();
+    const { query, asPath } = useRouter();
     const slug = query.slug;
+    
     return (
         <>
             {post.title}
