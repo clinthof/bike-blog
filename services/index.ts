@@ -68,12 +68,13 @@ const getPostDetails = async (slug: string) => {
 
 const getRecentPosts = async () => {
   const query = gql`
-    query GetPosts() {
+    query getPosts() {
       posts(
         orderBy: createdAt_DESC
         first: 3
       ) {
         title
+        slug
         }
     }
   `;

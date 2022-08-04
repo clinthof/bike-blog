@@ -17,7 +17,6 @@ const Title = styled.h1`
 
 const Splash = styled.div`
   display: flex;
-  height: 100vh;
   width: auto;
 `;
 
