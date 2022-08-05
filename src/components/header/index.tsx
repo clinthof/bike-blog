@@ -12,28 +12,28 @@ export interface Props {
   children: ReactNode;
 };
 
-const Header = ({ children, ...restProps }: Props) => {
-    return <Container {...restProps}>{children}</Container>;
+const Header = (props: Props) => {
+    return <Container {...props}></Container>;
 };
 
-Header.Feature = forwardRef(function HeaderFeature({ children, ...restProps }: Props, ref) {
-  return <Feature {...restProps}>{children}</Feature>;
+Header.Feature = forwardRef(function HeaderFeature(props: Props, ref) {
+  return <Feature {...props}></Feature>;
 });
 
-Header.Nav = function HeaderNav({ children, ...restProps }: Props) {
-  return <Nav {...restProps}>{children}</Nav>;
+Header.Nav = function HeaderNav(props: Props) {
+  return <Nav {...props}></Nav>;
 };
 
-Header.List = function HeaderList({ children, ...restProps }: Props) {
-  return <List {...restProps}>{children}</List>;
+Header.List = function HeaderList(props: Props) {
+  return <List {...props}></List>;
 };
 
-Header.Item = forwardRef(function HeaderItem({ children, ...restProps }: Props, ref) {
-  return <Item {...restProps}>{children}</Item>;
+Header.Item = forwardRef(function HeaderItem(props: Props, ref) {
+  return <Item {...props}></Item>;
 });
 
-Header.Text = function HeaderText({ children, ...restProps }: Props) {
-  return <Text {...restProps}>{children}</Text>;
+Header.Text = function HeaderText(props: Props) {
+  return <Text {...props}></Text>;
 };
 
 export default Header;
