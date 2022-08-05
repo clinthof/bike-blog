@@ -1,4 +1,4 @@
-import { ReactNode, } from 'react';
+import { ReactNode, forwardRef, } from 'react';
 import {
   Wrapper,
   Card,
@@ -12,28 +12,28 @@ export interface Props {
   children: ReactNode;
 };
 
-const Post = ({ children, ...restProps }: Props) => {
-  return <Card {...restProps}>{children}</Card>;
+const Post = (props: Props) => {
+  return <Card {...props}></Card>;
 };
 
-Post.Wrapper = function PostWrapper({ children, ...restProps }: Props) {
-  return <Wrapper {...restProps}>{children}</Wrapper>
+Post.Wrapper = function PostWrapper(props: Props) {
+  return <Wrapper {...props}></Wrapper>
 }
 
-Post.StatsContainer = function PostStatsContainer({ children, ...restProps }: Props) {
-  return <StatsContainer {...restProps}>{children}</StatsContainer>;
+Post.StatsContainer = function PostStatsContainer(props: Props) {
+  return <StatsContainer {...props}></StatsContainer>;
 };
 
-Post.InfoContainer = function PostInfoContainer({ children, ...restProps }: Props) {
-  return <InfoContainer {...restProps}>{children}</InfoContainer>;
+Post.InfoContainer = function PostInfoContainer(props: Props) {
+  return <InfoContainer {...props}></InfoContainer>;
 };
 
-Post.Title = function PostTitle({ children, ...restProps }: Props) {
-  return <Title {...restProps}>{children}</Title>;
+Post.Title = function PostTitle(props: Props) {
+  return <Title {...props}></Title>;
 };
 
-Post.Excerpt = function PostExcerpt({ children, ...restProps }: Props) {
-  return <Excerpt {...restProps}>{children}</Excerpt>;
+Post.Excerpt = function PostExcerpt(props: Props) {
+  return <Excerpt {...props}></Excerpt>;
 };
 
 export default Post;
