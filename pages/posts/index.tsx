@@ -1,15 +1,11 @@
-import {
-  NextPage,
-  GetStaticProps,
-  InferGetStaticPropsType,
-} from 'next';
-import { PostContainer } from '../../src/containers/post';
-import { getPosts } from '../../services';
+import {NextPage, GetStaticProps, InferGetStaticPropsType} from 'next';
+import {PostContainer} from '../../src/containers/post';
+import {getPosts} from '../../services';
 
-const posts: NextPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  return (
-    <PostContainer posts={posts} />
-  );
+const posts: NextPage = ({
+  posts,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  return <PostContainer posts={posts} />;
 };
 
 export default posts;
@@ -19,7 +15,8 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      posts
-    }
-  }
+      posts,
+    },
+    revalidate: 30,
+  };
 };
