@@ -13,40 +13,37 @@ const BlogPost: NextPage = ({
   const {query, asPath} = useRouter();
   const slug = query.slug;
 
-  if (!post?.title) {
+  if (!post) {
     return <>Loading...</>;
   }
 
-  return <h1>{post.title}</h1>;
+  return (
+    <h1>
+      {post.title} | {post.createdAt}
+    </h1>
+  );
 };
 
 export default BlogPost;
 
-export const getStaticProps: GetStaticProps = async ({params}) => {
-  let data = null;
-
-  try {
-    data = await getPostDetails(params?.slug as string);
-  } catch (err) {
-    if (typeof err === 'string') {
-      console.log(`Error:\n${err.toUpperCase()}`);
-    } else if (err instanceof Error) {
-      console.log(`Error:\n${err.message}`);
-    }
-  }
+export const getStaticPaths: GetStaticPaths = async () => {
+  const posts: Post[] = await getPosts();
+  const paths = posts.map(post => {
+    return {params: {slug: post.node.slug}};
+  });
 
   return {
-    props: {post: data},
+    paths,
+    fallback: false,
   };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = await getPosts();
+export const getStaticProps: GetStaticProps = async ({params}) => {
+  const data: Promise<typeof params> = await getPostDetails(
+    params?.slug as string
+  );
 
   return {
-    paths: posts.map(({node: {slug}}) => ({
-      params: {slug},
-    })),
-    fallback: false,
+    props: {post: data},
   };
 };
